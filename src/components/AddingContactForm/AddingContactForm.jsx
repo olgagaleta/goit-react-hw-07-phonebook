@@ -9,14 +9,13 @@ import {
   ToFormikInput,
 } from './AddingContactForm.styled';
 
-//Схема валидации
+//Схема валидацї
 const schema = yup.object().shape({
   name: yup.string().required(),
   number: yup.number().required().positive().integer(),
 });
 
 export const ContactForm = ({ onSubmit }) => {
-  
   const handleSubmit = (values, { resetForm }) => {
     onSubmit(values);
     resetForm();
